@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Classification</title>
+</head>
+<body>
+
+<script>
+function classifyNumber(number) {
+  let sum = 0;
+
+    for (let i = 1; i < number; i++) {
+    if (number % i === 0) {
+      sum += i;
+    }
+  }
+ if (sum === number) {
+    alert(number + " is a Perfect Number.");
+  } else if (sum > number) {
+    alert(number + " is an Abundant Number.");
+  } else {
+    alert(number + " is a Deficient Number.");
+  }
+}
+
+let num = parseInt(prompt("Enter a number:"));
+if (!isNaN(num) && num > 0) {
+  classifyNumber(num);
+} else {
+  alert("Please enter a valid positive number.");
+}
+</script>
+
+</body>
+</html>
